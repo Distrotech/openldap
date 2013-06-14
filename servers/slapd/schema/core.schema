@@ -171,7 +171,7 @@ attributetype ( 2.5.4.19 NAME 'physicalDeliveryOfficeName'
 	SUBSTR caseIgnoreSubstringsMatch
 	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{128} )
 
-attributetype ( 2.5.4.20 NAME 'telephoneNumber'
+attributetype ( 2.5.4.20 NAME ( 'telephoneNumber' 'xmozillaanyphone' )
 	DESC 'RFC2256: Telephone Number'
 	EQUALITY telephoneNumberMatch
 	SUBSTR telephoneNumberSubstringsMatch
@@ -403,8 +403,7 @@ objectclass ( 2.5.6.5 NAME 'organizationalUnit'
 objectclass ( 2.5.6.6 NAME 'person'
 	DESC 'RFC2256: a person'
 	SUP top STRUCTURAL
-	MUST ( sn $ cn )
-	MAY ( userPassword $ telephoneNumber $ seeAlso $ description ) )
+	MAY ( sn $ cn $ userPassword $ telephoneNumber $ seeAlso $ description ) )
 
 objectclass ( 2.5.6.7 NAME 'organizationalPerson'
 	DESC 'RFC2256: an organizational person'
