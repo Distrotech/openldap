@@ -554,7 +554,7 @@ AC_DEFUN([OL_BDB_COMPAT],
 #define DB_VERSION_FULL        ((DB_VERSION_MAJOR<<16)|(DB_VERSION_MINOR<<8)|DB_VERSION_PATCH)
 
 /* require 4.4 or later, but less than 6.0.20 */
-#if DB_VERSION_FULL >= 0x040400 && DB_VERSION_FULL < 0x060014
+#if DB_VERSION_FULL >= 0x040400
 	__db_version_compat
 #endif
 #if DB_VERSION_FULL >= 0x060014
